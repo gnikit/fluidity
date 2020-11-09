@@ -1930,7 +1930,7 @@ subroutine create_ksp_from_options(ksp, mat, pmat, solver_option_path, parallel,
       if (pctype==PCBJACOBI) then
         call PCBJACOBIGetSubKSP(pc, n_local, first_local, subksp, ierr)
       else
-        call PCASMGetSubKSP(pc, PETSC_NULL_INTEGER, PETSC_NULL_INTEGER, subksp, ierr)
+        call PCASMGetSubKSP(pc, n_local, first_local, subksp, ierr)
       end if
 
       call KSPGetPC(subksp, subpc, ierr)
