@@ -106,3 +106,7 @@ JudyLTablesGen
 configure.lineno
 libjudy/src/Judy1/Judy1Tables.c
 libjudy/src/JudyL/JudyLTables.c
+
+## CMake
+build/
+*.egg-info/
