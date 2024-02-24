@@ -285,8 +285,8 @@ else()
   string(APPEND CMAKE_Fortran_FLAGS " -march=native")
 endif()
 
-configure_file(tools/version-info.in bin/version-info @ONLY)
-execute_process(COMMAND bin/version-info include/version.h OUTPUT_QUIET)
+configure_file(${CMAKE_CURRENT_SOURCE_DIR}/tools/version-info.in ${CMAKE_BINARY_DIR}/bin/version-info @ONLY)
+execute_process(COMMAND ${CMAKE_BINARY_DIR}/bin/version-info ${CMAKE_BINARY_DIR}/include/version.h)
 
 # Build the fluidity static library
 add_library(fluidity STATIC $<TARGET_OBJECTS:spud>)
