@@ -106,3 +106,11 @@ JudyLTablesGen
 configure.lineno
 libjudy/src/Judy1/Judy1Tables.c
 libjudy/src/JudyL/JudyLTables.c
+
+## CMake
+build/
+*.egg-info/
+FC.h
+libspud/python/setup.py
+schemas/spud_base.rnc
+schemas/spud_base.rng
